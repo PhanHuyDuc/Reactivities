@@ -1,0 +1,11 @@
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\bin\Debug\net8.0\Domain.dll
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\bin\Debug\net8.0\Domain.pdb
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\obj\Debug\net8.0\Domain.dll
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\obj\Debug\net8.0\refint\Domain.dll
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\obj\Debug\net8.0\Domain.pdb
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\obj\Debug\net8.0\ref\Domain.dll
