@@ -9,3 +9,4 @@ D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\obj\Debug\net8.0\Domain.
 D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\obj\Debug\net8.0\refint\Domain.dll
 D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\obj\Debug\net8.0\Domain.pdb
 D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\obj\Debug\net8.0\ref\Domain.dll
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\obj\Debug\net8.0\Domain.sourcelink.json

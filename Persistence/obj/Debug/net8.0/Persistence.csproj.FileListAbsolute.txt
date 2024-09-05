@@ -15,3 +15,4 @@ D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Persistence\obj\Debug\net8.0\Pe
 D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Persistence\obj\Debug\net8.0\ref\Persistence.dll
 D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Persistence\bin\Debug\net8.0\Persistence.runtimeconfig.json
 D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Persistence\obj\Debug\net8.0\Persistence.genruntimeconfig.cache
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Persistence\obj\Debug\net8.0\Persistence.sourcelink.json

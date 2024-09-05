@@ -23,6 +23,7 @@ namespace API.Controllers
         public async Task<ActionResult<Activity>> GetActivity(Guid id)
         {
             return await _context.Activities.FindAsync(id);
+
         }
     }
 }
