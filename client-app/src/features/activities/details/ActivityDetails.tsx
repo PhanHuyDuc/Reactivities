@@ -1,17 +1,26 @@
 import Button from '../../../ui/Button';
 import { useStore } from '../../../app/stores/store';
 import Loader from '../../../ui/Loader';
+import { useParams } from 'react-router-dom';
+import { useEffect } from 'react';
+import { observer } from 'mobx-react-lite';
 
 function ActivityDetails() {
   const { activityStore } = useStore();
   const {
     selectedActivity: activity,
-    openForm,
-    cancelSelectedActivity,
+    loadActivity,
+    loadingInitial,
   } = activityStore;
-  if (!activity) return <Loader />;
+  const { id } = useParams();
+
+  useEffect(() => {
+    if (id) loadActivity(id);
+  }, [id, loadActivity]);
+
+  if (loadingInitial || !activity) return <Loader />;
   return (
-    <div className="border bg-white p-2 text-left">
+    <div className="min-h-dvh border bg-white p-2 text-left">
       <img
         className="px-4 py-2"
         src={`/assets/categoryImages/${activity.category}.jpg`}
@@ -28,21 +37,10 @@ function ActivityDetails() {
       </div>
 
       <div className="flex justify-end space-x-2 py-2">
-        <Button
-          type="secondary"
-          onClick={() => {
-            cancelSelectedActivity();
-          }}
-        >
+        <Button to="/activities" type="secondary">
           Cancel
         </Button>
-        <Button
-          type="primary"
-          onClick={(e) => {
-            e.preventDefault();
-            openForm(activity.id);
-          }}
-        >
+        <Button to={`/manage/${activity.id}`} type="primary">
           Edit
         </Button>
       </div>
@@ -50,4 +48,4 @@ function ActivityDetails() {
   );
 }
 
-export default ActivityDetails;
+export default observer(ActivityDetails);

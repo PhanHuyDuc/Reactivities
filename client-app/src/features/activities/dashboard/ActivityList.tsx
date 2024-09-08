@@ -46,10 +46,7 @@ function ActivityList() {
                     {' '}
                     {loading && target === activity.id ? `Deleting` : `Delete`}
                   </button>
-                  <Button
-                    onClick={() => activityStore.selectActivity(activity.id)}
-                    type="small"
-                  >
+                  <Button to={`/activities/${activity.id}`} type="small">
                     View
                   </Button>
                 </div>

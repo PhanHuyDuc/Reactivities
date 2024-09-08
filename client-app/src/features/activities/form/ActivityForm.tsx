@@ -1,17 +1,25 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import Button from '../../../ui/Button';
 import { useStore } from '../../../app/stores/store';
 import { observer } from 'mobx-react-lite';
+import { useNavigate, useParams } from 'react-router-dom';
+import { Activity } from '../../../app/models/activity';
+import Loader from '../../../ui/Loader';
+import { v4 as uuid } from 'uuid';
 
 function ActivityForm() {
   const { activityStore } = useStore();
+  const navigate = useNavigate();
   const {
-    selectedActivity,
-    closeForm,
     createActivity,
     updateActivity,
     loading,
+    loadActivity,
+    loadingInitial,
   } = activityStore;
+
+  const { id } = useParams();
+
   function handleInputChange(
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) {
@@ -19,10 +27,18 @@ function ActivityForm() {
     setActivity({ ...activity, [name]: value });
   }
   function handleSubmit() {
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    activity.id ? updateActivity(activity) : createActivity(activity);
+    if (!activity.id) {
+      activity.id = uuid();
+      createActivity(activity).then(() =>
+        navigate(`/activities/${activity.id}`),
+      );
+    } else {
+      updateActivity(activity).then(() =>
+        navigate(`/activities/${activity.id}`),
+      );
+    }
   }
-  const initialState = selectedActivity ?? {
+  const [activity, setActivity] = useState<Activity>({
     id: '',
     title: '',
     category: '',
@@ -30,12 +46,17 @@ function ActivityForm() {
     date: '',
     city: '',
     venue: '',
-  };
-  const [activity, setActivity] = useState(initialState);
+  });
+  useEffect(() => {
+    if (id) loadActivity(id).then((activity) => setActivity(activity!));
+  }, [id, loadActivity]);
+
+  if (loadingInitial) return <Loader />;
+
   return (
     <form onSubmit={handleSubmit} autoComplete="off">
       {' '}
-      <div className="border bg-white p-2">
+      <div className="min-h-dvh border bg-white p-2">
         <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
           {/* <label className="sm:basis-40">Title</label> */}
           <input
@@ -112,13 +133,7 @@ function ActivityForm() {
         </div>
         <div className="flex flex-col justify-end sm:flex-row sm:items-center">
           <div className="z-50 items-center justify-between space-x-2 text-center sm:top-0 md:top-1">
-            <Button
-              type="secondary"
-              onClick={(e) => {
-                e.preventDefault();
-                closeForm();
-              }}
-            >
+            <Button to="/activities" type="secondary">
               Cancel
             </Button>
             <Button
