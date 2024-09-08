@@ -1,21 +1,13 @@
-import React, { SyntheticEvent, useState } from 'react';
-import { Activity } from '../../../app/models/activity';
+import { SyntheticEvent, useState } from 'react';
 import Button from '../../../ui/Button';
+import { useStore } from '../../../app/stores/store';
+import { observer } from 'mobx-react-lite';
 
-interface Props {
-  activities: Activity[];
-  selectActivity: (id: string) => void;
-  deleteActivity: (id: string) => void;
-  submitting: boolean;
-}
-
-function ActivityList({
-  activities,
-  selectActivity,
-  deleteActivity,
-  submitting,
-}: Props) {
+function ActivityList() {
+  const { activityStore } = useStore();
+  const { deleteActivity, activitiesByDate, loading } = activityStore;
   const [target, setTarget] = useState('');
+
   function handleActivityDelete(
     e: SyntheticEvent<HTMLButtonElement>,
     id: string,
@@ -23,10 +15,11 @@ function ActivityList({
     setTarget(e.currentTarget.name);
     deleteActivity(id);
   }
+
   return (
     <>
       <ul className="divide-y divide-stone-200 px-2">
-        {activities.map((activity) => (
+        {activitiesByDate.map((activity) => (
           <li className="flex gap-4 py-2" key={activity.id}>
             <div className="flex grow flex-col pt-0.5">
               <p className="font-medium">{activity.title}</p>
@@ -51,12 +44,10 @@ function ActivityList({
                     name={activity.id}
                   >
                     {' '}
-                    {submitting && target === activity.id
-                      ? `Deleting`
-                      : `Delete`}
+                    {loading && target === activity.id ? `Deleting` : `Delete`}
                   </button>
                   <Button
-                    onClick={() => selectActivity(activity.id)}
+                    onClick={() => activityStore.selectActivity(activity.id)}
                     type="small"
                   >
                     View
@@ -71,4 +62,4 @@ function ActivityList({
   );
 }
 
-export default ActivityList;
+export default observer(ActivityList);

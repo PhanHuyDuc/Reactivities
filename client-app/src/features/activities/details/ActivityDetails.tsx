@@ -1,20 +1,15 @@
-import React from 'react';
-import { Activity } from '../../../app/models/activity';
 import Button from '../../../ui/Button';
+import { useStore } from '../../../app/stores/store';
+import Loader from '../../../ui/Loader';
 
-interface Props {
-  activity: Activity;
-  cancelSelectActivity: () => void;
-  openForm: (id: string) => void;
-  closeForm: () => void;
-}
-
-function ActivityDetails({
-  activity,
-  cancelSelectActivity,
-  openForm,
-  closeForm,
-}: Props) {
+function ActivityDetails() {
+  const { activityStore } = useStore();
+  const {
+    selectedActivity: activity,
+    openForm,
+    cancelSelectedActivity,
+  } = activityStore;
+  if (!activity) return <Loader />;
   return (
     <div className="border bg-white p-2 text-left">
       <img
@@ -36,7 +31,7 @@ function ActivityDetails({
         <Button
           type="secondary"
           onClick={() => {
-            cancelSelectActivity();
+            cancelSelectedActivity();
           }}
         >
           Cancel
