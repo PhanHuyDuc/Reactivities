@@ -4,6 +4,10 @@ import Loader from '../../../ui/Loader';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
+import ActivityDetailedHeader from './ActivityDetailedHeader';
+import ActivityDetailedInfo from './ActivityDetailedInfo';
+import ActivityDetailedChat from './ActivityDetailedChat';
+import ActivityDetailedSidebar from './ActivityDetailedSidebar';
 
 function ActivityDetails() {
   const { activityStore } = useStore();
@@ -20,29 +24,14 @@ function ActivityDetails() {
 
   if (loadingInitial || !activity) return <Loader />;
   return (
-    <div className="min-h-dvh border bg-white p-2 text-left">
-      <img
-        className="px-4 py-2"
-        src={`/assets/categoryImages/${activity.category}.jpg`}
-        alt={activity.title}
-      />
-      <div className="border-b">
-        <h1 className="font-semibold">{activity.title}</h1>
-        <span className="text-[11px] text-stone-400 sm:text-sm">
-          {activity.date}
-        </span>
-        <p className="text-[12px] text-stone-700 sm:text-sm">
-          {activity.description}
-        </p>
+    <div className="grid min-h-dvh grid-cols-3 gap-4 py-4">
+      <div className="col-span-2">
+        <ActivityDetailedHeader activity={activity} />
+        <ActivityDetailedInfo activity={activity} />
+        <ActivityDetailedChat />
       </div>
-
-      <div className="flex justify-end space-x-2 py-2">
-        <Button to="/activities" type="secondary">
-          Cancel
-        </Button>
-        <Button to={`/manage/${activity.id}`} type="primary">
-          Edit
-        </Button>
+      <div>
+        <ActivityDetailedSidebar />
       </div>
     </div>
   );

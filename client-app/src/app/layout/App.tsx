@@ -13,7 +13,7 @@ function App() {
         <>
           <div className="overflow-auto bg-stone-100">
             <NavBar />
-            <main className="mx-auto max-w-5xl">
+            <main className="mx-auto max-w-7xl">
               <Outlet />
             </main>
           </div>

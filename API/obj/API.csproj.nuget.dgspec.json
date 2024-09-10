@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\api\\API.csproj": {}
+    "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\api\\API.csproj": {
+    "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\api\\API.csproj",
+        "projectUniqueName": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\api\\API.csproj",
+        "projectPath": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\API\\API.csproj",
         "packagesPath": "C:\\Users\\phanh\\.nuget\\packages\\",
-        "outputPath": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\api\\obj\\",
+        "outputPath": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\VS\\shared\\NuGetPackages"
