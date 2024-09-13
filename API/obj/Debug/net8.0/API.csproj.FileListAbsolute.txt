@@ -136,3 +136,6 @@ D:\DucPH\Udemy\DotNet+React\Project\Reactivities\API\bin\Debug\net8.0\MediatR.dl
 D:\DucPH\Udemy\DotNet+React\Project\Reactivities\API\bin\Debug\net8.0\MediatR.Contracts.dll
 D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\AutoMapper.dll
 D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\FluentValidation.dll
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll

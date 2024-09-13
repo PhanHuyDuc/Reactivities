@@ -11,6 +11,9 @@ function NavBar() {
       <NavLink to={`/activities`} className="text-white">
         Activities
       </NavLink>
+      <NavLink to={`/errors`} className="text-white">
+        Error
+      </NavLink>
       <NavLink
         to={`/createActivity`}
         className="inline-block rounded-full bg-green-400 px-4 py-3 text-sm font-semibold uppercase tracking-wide text-white transition-colors duration-300 hover:bg-green-300 focus:bg-green-300 focus:outline-none focus:ring focus:ring-green-300 focus:ring-offset-2 disabled:cursor-not-allowed sm:px-6 sm:py-4"

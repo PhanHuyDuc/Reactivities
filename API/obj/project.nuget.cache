@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "ctRcRHIyCwA=",
+  "dgSpecHash": "GRniGC4h1Rc=",
   "success": true,
-  "projectFilePath": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\API\\API.csproj",
+  "projectFilePath": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\api\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\phanh\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\phanh\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\phanh\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\phanh\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\phanh\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\phanh\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\phanh\\.nuget\\packages\\mediatr\\12.4.0\\mediatr.12.4.0.nupkg.sha512",
     "C:\\Users\\phanh\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
