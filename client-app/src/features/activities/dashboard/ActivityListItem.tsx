@@ -4,6 +4,7 @@ import { Activity } from '../../../app/models/activity';
 import { useStore } from '../../../app/stores/store';
 import { Link } from 'react-router-dom';
 import { ClockIcon, MapPinIcon } from '@heroicons/react/16/solid';
+import { format } from 'date-fns';
 interface Props {
   activity: Activity;
 }
@@ -36,7 +37,8 @@ function ActivityListItem({ activity }: Props) {
       </div>
       <div className="flex space-x-2 border-b-2 px-2 py-2">
         <div className="flex">
-          <ClockIcon className="size-6 text-stone-700" /> {activity.date}
+          <ClockIcon className="size-6 text-stone-700" />{' '}
+          {format(activity.date!, 'dd MMM yyyy h:mm aa')}
         </div>
         <div className="flex">
           <MapPinIcon className="size-6 text-stone-700" /> {activity.category}

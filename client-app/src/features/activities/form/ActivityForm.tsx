@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from '../../../ui/Button';
 import { useStore } from '../../../app/stores/store';
 import { observer } from 'mobx-react-lite';
@@ -6,6 +6,13 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { Activity } from '../../../app/models/activity';
 import Loader from '../../../ui/Loader';
 import { v4 as uuid } from 'uuid';
+import { Form, Formik } from 'formik';
+import * as Yup from 'yup';
+import MyTextInput from '../../../app/common/form/MyTextInput';
+import MyTextArea from '../../../app/common/form/MyTextArea';
+import MySelectInput from '../../../app/common/form/MySelectInput';
+import { categoryOptions } from '../../../app/common/options/categoryOptions';
+import MyDateInput from '../../../app/common/form/MyDateInput';
 
 function ActivityForm() {
   const { activityStore } = useStore();
@@ -20,13 +27,7 @@ function ActivityForm() {
 
   const { id } = useParams();
 
-  function handleInputChange(
-    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) {
-    const { name, value } = event.target;
-    setActivity({ ...activity, [name]: value });
-  }
-  function handleSubmit() {
+  function handleFormSubmit(activity: Activity) {
     if (!activity.id) {
       activity.id = uuid();
       createActivity(activity).then(() =>
@@ -43,10 +44,20 @@ function ActivityForm() {
     title: '',
     category: '',
     description: '',
-    date: '',
+    date: null,
     city: '',
     venue: '',
   });
+
+  const validationSchema = Yup.object({
+    title: Yup.string().required('The activity title is required'),
+    description: Yup.string().required('The activity description is required'),
+    category: Yup.string().required('The activity category is required'),
+    date: Yup.string().required('The activity date is required'),
+    city: Yup.string().required('The activity city is required'),
+    venue: Yup.string().required('The activity venue is required'),
+  });
+
   useEffect(() => {
     if (id) loadActivity(id).then((activity) => setActivity(activity!));
   }, [id, loadActivity]);
@@ -54,101 +65,54 @@ function ActivityForm() {
   if (loadingInitial) return <Loader />;
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
-      {' '}
-      <div className="min-h-dvh border bg-white p-2">
-        <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
-          {/* <label className="sm:basis-40">Title</label> */}
-          <input
-            className="h-10 grow border p-2"
-            type="text"
-            name="title"
-            placeholder="title"
-            value={activity.title}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-
-        <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
-          {/* <label className="sm:basis-40">Description</label> */}
-          <div className="grow border">
-            <textarea
-              name="description"
-              placeholder="Description"
-              className="h-10 w-full grow p-2"
-              value={activity.description}
-              onChange={handleInputChange}
-              required
+    <Formik
+      validationSchema={validationSchema}
+      enableReinitialize
+      initialValues={activity}
+      onSubmit={(values) => handleFormSubmit(values)}
+    >
+      {({ handleSubmit, isSubmitting, dirty, isValid }) => (
+        <Form onSubmit={handleSubmit} autoComplete="off">
+          {' '}
+          <div className="min-h-dvh border bg-white p-2">
+            <MyTextInput name="title" placeholder="Title" />
+            <MyTextArea name="description" placeholder="Description" />
+            <MySelectInput
+              options={categoryOptions}
+              name="category"
+              placeholder="--Choose category--"
             />
+            <MyDateInput
+              showTimeSelect
+              timeCaption="time"
+              name="date"
+              placeholderText="Date"
+              dateFormat="dd/MM/yyyy, h:mm aa"
+            />
+            <MyTextInput name="city" placeholder="City" />
+            <MyTextInput name="venue" placeholder="Venue" />
+
+            <div className="flex flex-col justify-end sm:flex-row sm:items-center">
+              <div className="items-center justify-between space-x-2 text-center sm:top-0 md:top-1">
+                <Button to="/activities" type="secondary">
+                  Cancel
+                </Button>
+                <Button
+                  disabled={isSubmitting || !dirty || !isValid}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleSubmit();
+                  }}
+                  type="primary"
+                >
+                  {loading ? `Loading...` : `Submit`}
+                </Button>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
-          {/* <label className="sm:basis-40">Category</label> */}
-          <input
-            className="h-10 grow border p-2"
-            type="text"
-            name="category"
-            placeholder="Category"
-            value={activity.category}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
-          {/* <label className="sm:basis-40">Date</label> */}
-          <input
-            className="h-10 grow border p-2"
-            type="date"
-            name="date"
-            placeholder="Date"
-            value={activity.date}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
-          {/* <label className="sm:basis-40">City</label> */}
-          <input
-            className="h-10 grow border p-2"
-            type="text"
-            name="city"
-            placeholder="City"
-            value={activity.city}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
-          {/* <label className="sm:basis-40">Venue</label> */}
-          <input
-            className="h-10 grow border p-2"
-            type="text"
-            name="venue"
-            placeholder="Venue"
-            value={activity.venue}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        <div className="flex flex-col justify-end sm:flex-row sm:items-center">
-          <div className="z-50 items-center justify-between space-x-2 text-center sm:top-0 md:top-1">
-            <Button to="/activities" type="secondary">
-              Cancel
-            </Button>
-            <Button
-              onClick={(e) => {
-                e.preventDefault();
-                handleSubmit();
-              }}
-              type="primary"
-            >
-              {loading ? `Loading` : `Submit`}
-            </Button>
-          </div>
-        </div>
-      </div>
-    </form>
+        </Form>
+      )}
+    </Formik>
   );
 }
 

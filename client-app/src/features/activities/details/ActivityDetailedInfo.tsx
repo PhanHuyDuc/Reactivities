@@ -4,6 +4,7 @@ import { observer } from 'mobx-react-lite';
 import { InformationCircleIcon } from '@heroicons/react/16/solid';
 import { CalendarDateRangeIcon } from '@heroicons/react/24/outline';
 import { MapPinIcon } from '@heroicons/react/20/solid';
+import { format } from 'date-fns';
 
 interface Props {
   activity: Activity;
@@ -24,7 +25,7 @@ function ActivityDetailedInfo({ activity }: Props) {
             {' '}
             <CalendarDateRangeIcon className="size-6 text-green-500" />{' '}
           </div>
-          <div> {activity.date}</div>
+          <div> {format(activity.date!, 'dd MMM yyyy h:mm aa')}</div>
         </div>
         <div className="flex space-x-4 px-3 py-4">
           <div>
