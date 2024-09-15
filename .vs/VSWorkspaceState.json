@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\client-app\\src\\app"
   ],
-  "SelectedNode": "\\Reactivities.sln",
+  "SelectedNode": "\\client-app",
   "PreviewInSolutionExplorer": false
 }

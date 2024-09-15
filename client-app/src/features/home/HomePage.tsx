@@ -1,6 +1,10 @@
+import { observer } from 'mobx-react-lite';
 import { Link } from 'react-router-dom';
+import { useStore } from '../../app/stores/store';
+import Button from '../../ui/Button';
 
 function HomePage() {
+  const { userStore } = useStore();
   return (
     <div className="flex min-h-screen items-center justify-center overflow-auto bg-gradient-to-r from-blue-800 via-blue-600 to-cyan-500">
       <main className="mx-auto max-w-5xl text-center">
@@ -12,16 +16,30 @@ function HomePage() {
             />
             <span className="text-[100px]">Reactivities</span>
           </div>
-          <div className="my-4 text-xl font-bold">Welcome to Reactivities</div>
-          <div className="my-6">
-            <Link to={`/activities`} className="border-2 p-4 text-xl font-bold">
-              Take me to the Activities
-            </Link>
-          </div>
+          {userStore.isLogedIn ? (
+            <>
+              {' '}
+              <div className="my-4 text-xl font-bold">
+                Welcome to Reactivities
+              </div>
+              <div className="my-6">
+                <Link
+                  to={`/activities`}
+                  className="border-2 p-4 text-xl font-bold"
+                >
+                  Go to Activities!
+                </Link>
+              </div>
+            </>
+          ) : (
+            <Button to={`/login`} type="secondary">
+              Login!
+            </Button>
+          )}
         </div>
       </main>
     </div>
   );
 }
 
-export default HomePage;
+export default observer(HomePage);
