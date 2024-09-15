@@ -10,3 +10,4 @@ D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\obj\Debug\net8.0\refint\
 D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\obj\Debug\net8.0\Domain.pdb
 D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\obj\Debug\net8.0\ref\Domain.dll
 D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache

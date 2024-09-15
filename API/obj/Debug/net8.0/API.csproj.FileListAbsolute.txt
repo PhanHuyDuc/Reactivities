@@ -139,3 +139,17 @@ D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\AutoMapper
 D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\FluentValidation.dll
 D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
 D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\DucPH\Udemy\DotNet+React\Project\Reactivities\api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
