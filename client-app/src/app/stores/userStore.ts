@@ -10,16 +10,36 @@ export default class UserStore {
   constructor() {
     makeAutoObservable(this);
   }
-  get isLogedIn() {
+  get isLoggedIn() {
     return !!this.user;
   }
 
   login = async (creds: UserFormValues) => {
-    const user = await agent.Account.login(creds);
-    store.commonStore.setToken(user.token);
-    runInAction(() => (this.user = user));
-    router.navigate('/activities');
+    // eslint-disable-next-line no-useless-catch
+    try {
+      const user = await agent.Account.login(creds);
+      store.commonStore.setToken(user.token);
+      runInAction(() => (this.user = user));
+      router.navigate('/activities');
+      store.modalStore.closeModal();
+    } catch (error) {
+      throw error;
+    }
   };
+
+  register = async (creds: UserFormValues) => {
+    // eslint-disable-next-line no-useless-catch
+    try {
+      const user = await agent.Account.register(creds);
+      store.commonStore.setToken(user.token);
+      runInAction(() => (this.user = user));
+      router.navigate('/activities');
+      store.modalStore.closeModal();
+    } catch (error) {
+      throw error;
+    }
+  };
+
   logout = () => {
     store.commonStore.setToken('jwt');
     this.user = null;

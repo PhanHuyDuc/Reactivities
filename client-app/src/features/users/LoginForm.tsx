@@ -20,6 +20,11 @@ function LoginForm() {
     >
       {({ handleSubmit, isSubmitting, errors }) => (
         <Form className="ui form px-3" onSubmit={handleSubmit}>
+          <div className="text-center">
+            <span className="text-xl font-bold text-cyan-500">
+              Login to Reactivities
+            </span>
+          </div>
           <MyTextInput placeholder="Email" name="email" />
           <MyTextInput placeholder="Password" name="password" type="password" />
           <ErrorMessage

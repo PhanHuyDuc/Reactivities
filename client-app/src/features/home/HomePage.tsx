@@ -2,9 +2,11 @@ import { observer } from 'mobx-react-lite';
 import { Link } from 'react-router-dom';
 import { useStore } from '../../app/stores/store';
 import Button from '../../ui/Button';
+import LoginForm from '../users/LoginForm';
+import RegisterForm from '../users/RegisterForm';
 
 function HomePage() {
-  const { userStore } = useStore();
+  const { userStore, modalStore } = useStore();
   return (
     <div className="flex min-h-screen items-center justify-center overflow-auto bg-gradient-to-r from-blue-800 via-blue-600 to-cyan-500">
       <main className="mx-auto max-w-5xl text-center">
@@ -16,7 +18,7 @@ function HomePage() {
             />
             <span className="text-[100px]">Reactivities</span>
           </div>
-          {userStore.isLogedIn ? (
+          {userStore.isLoggedIn ? (
             <>
               {' '}
               <div className="my-4 text-xl font-bold">
@@ -32,9 +34,20 @@ function HomePage() {
               </div>
             </>
           ) : (
-            <Button to={`/login`} type="secondary">
-              Login!
-            </Button>
+            <div className="space-x-2">
+              <Button
+                onClick={() => modalStore.openModal(<LoginForm />)}
+                type="secondary"
+              >
+                Login!
+              </Button>
+              <Button
+                onClick={() => modalStore.openModal(<RegisterForm />)}
+                type="secondary"
+              >
+                Register!
+              </Button>
+            </div>
           )}
         </div>
       </main>

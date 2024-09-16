@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 interface Props {
   children?: React.ReactNode;
   to?: string;
-  disabled?: boolean;
+  disabled?: boolean | undefined;
   type?:
     | 'primary'
     | 'small'
@@ -42,7 +42,11 @@ function Button({ children, type, onClick, to, disabled }: Props) {
         {children}
       </button>
     );
-  return <button className={styles[type]}>{children}</button>;
+  return (
+    <button disabled={disabled} className={styles[type]}>
+      {children}
+    </button>
+  );
 }
 
 export default Button;

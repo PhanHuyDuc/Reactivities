@@ -1,15 +1,13 @@
 import SearchOrder from './SearchOrder';
 import Logo from '../../../public/assets/logo.png';
-import { Link, NavLink, useNavigate, useNavigation } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useStore } from '../stores/store';
 import { observer } from 'mobx-react-lite';
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import {
-  ArchiveBoxXMarkIcon,
   ChevronDownIcon,
   PencilIcon,
   Square2StackIcon,
-  TrashIcon,
 } from '@heroicons/react/16/solid';
 
 function NavBar() {
