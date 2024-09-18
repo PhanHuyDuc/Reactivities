@@ -11,3 +11,16 @@ D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\obj\Debug\net8.0\Domain.
 D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\obj\Debug\net8.0\ref\Domain.dll
 D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\obj\Debug\net8.0\Domain.sourcelink.json
 D:\DucPH\Udemy\DotNet+React\Project\Reactivities\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
+D:\Proj\Reactivities\Reactivities\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\Proj\Reactivities\Reactivities\Domain\bin\Debug\net8.0\Domain.dll
+D:\Proj\Reactivities\Reactivities\Domain\bin\Debug\net8.0\Domain.pdb
+D:\Proj\Reactivities\Reactivities\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
+D:\Proj\Reactivities\Reactivities\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proj\Reactivities\Reactivities\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\Proj\Reactivities\Reactivities\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\Proj\Reactivities\Reactivities\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\Proj\Reactivities\Reactivities\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+D:\Proj\Reactivities\Reactivities\Domain\obj\Debug\net8.0\Domain.dll
+D:\Proj\Reactivities\Reactivities\Domain\obj\Debug\net8.0\refint\Domain.dll
+D:\Proj\Reactivities\Reactivities\Domain\obj\Debug\net8.0\Domain.pdb
+D:\Proj\Reactivities\Reactivities\Domain\obj\Debug\net8.0\ref\Domain.dll

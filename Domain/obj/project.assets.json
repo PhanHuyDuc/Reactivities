@@ -815,32 +815,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\phanh\\.nuget\\packages\\": {},
-    "D:\\VS\\shared\\NuGetPackages": {}
+    "C:\\Users\\Phate\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\Domain\\Domain.csproj",
+      "projectUniqueName": "D:\\Proj\\Reactivities\\Reactivities\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "d:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\Domain\\Domain.csproj",
-      "packagesPath": "C:\\Users\\phanh\\.nuget\\packages\\",
-      "outputPath": "d:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\Domain\\obj\\",
+      "projectPath": "D:\\Proj\\Reactivities\\Reactivities\\Domain\\Domain.csproj",
+      "packagesPath": "C:\\Users\\Phate\\.nuget\\packages\\",
+      "outputPath": "D:\\Proj\\Reactivities\\Reactivities\\Domain\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\VS\\shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\phanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Phate\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -885,7 +877,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

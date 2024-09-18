@@ -1,43 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\Application\\Application.csproj": {}
+    "D:\\Proj\\Reactivities\\Reactivities\\Application\\Application.csproj": {}
   },
   "projects": {
-    "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\Application\\Application.csproj": {
+    "D:\\Proj\\Reactivities\\Reactivities\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\Proj\\Reactivities\\Reactivities\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\phanh\\.nuget\\packages\\",
-        "outputPath": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\Application\\obj\\",
+        "projectPath": "D:\\Proj\\Reactivities\\Reactivities\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Phate\\.nuget\\packages\\",
+        "outputPath": "D:\\Proj\\Reactivities\\Reactivities\\Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\VS\\shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\phanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Phate\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\Domain\\Domain.csproj"
+              "D:\\Proj\\Reactivities\\Reactivities\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Proj\\Reactivities\\Reactivities\\Domain\\Domain.csproj"
               },
-              "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\Persistence\\Persistence.csproj": {
-                "projectPath": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\Persistence\\Persistence.csproj"
+              "D:\\Proj\\Reactivities\\Reactivities\\Persistence\\Persistence.csproj": {
+                "projectPath": "D:\\Proj\\Reactivities\\Reactivities\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -86,33 +79,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\Domain\\Domain.csproj": {
+    "D:\\Proj\\Reactivities\\Reactivities\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Proj\\Reactivities\\Reactivities\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\phanh\\.nuget\\packages\\",
-        "outputPath": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\Domain\\obj\\",
+        "projectPath": "D:\\Proj\\Reactivities\\Reactivities\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Phate\\.nuget\\packages\\",
+        "outputPath": "D:\\Proj\\Reactivities\\Reactivities\\Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\VS\\shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\phanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Phate\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -157,41 +143,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\Persistence\\Persistence.csproj": {
+    "D:\\Proj\\Reactivities\\Reactivities\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "D:\\Proj\\Reactivities\\Reactivities\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\Persistence\\Persistence.csproj",
-        "packagesPath": "C:\\Users\\phanh\\.nuget\\packages\\",
-        "outputPath": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\Persistence\\obj\\",
+        "projectPath": "D:\\Proj\\Reactivities\\Reactivities\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\Phate\\.nuget\\packages\\",
+        "outputPath": "D:\\Proj\\Reactivities\\Reactivities\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\VS\\shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\phanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Phate\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\Domain\\Domain.csproj"
+              "D:\\Proj\\Reactivities\\Reactivities\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Proj\\Reactivities\\Reactivities\\Domain\\Domain.csproj"
               }
             }
           }
@@ -238,7 +217,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
