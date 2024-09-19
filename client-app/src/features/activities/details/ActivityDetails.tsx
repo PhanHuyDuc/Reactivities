@@ -31,7 +31,7 @@ function ActivityDetails() {
         <ActivityDetailedChat />
       </div>
       <div>
-        <ActivityDetailedSidebar />
+        <ActivityDetailedSidebar activity={activity} />
       </div>
     </div>
   );
