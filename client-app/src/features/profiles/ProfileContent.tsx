@@ -1,8 +1,9 @@
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react';
 import React from 'react';
-import ProfilePhotos from './profilePhotos';
+import ProfilePhotos from './ProfilePhotos';
 import { observer } from 'mobx-react-lite';
 import { Profile } from '../../app/models/profile';
+import ProfileAbout from './ProfileAbout';
 
 interface Props {
   profile: Profile;
@@ -12,18 +13,23 @@ function ProfileContent({ profile }: Props) {
   const panes = [
     {
       name: 'About',
+      content: <ProfileAbout />,
     },
     {
       name: 'Photos',
+      content: <ProfilePhotos profile={profile} />,
     },
     {
       name: 'Events',
+      content: 'Event Content',
     },
     {
       name: 'Followers',
+      content: 'Follower Content',
     },
     {
       name: 'Following',
+      content: 'Following Content',
     },
   ];
   return (
@@ -31,11 +37,9 @@ function ProfileContent({ profile }: Props) {
       <div className="flex w-full">
         <TabGroup className="flex w-full space-x-3">
           <TabPanels className="w-3/4 bg-white">
-            {panes.map(({ name }) => (
+            {panes.map(({ name, content }) => (
               <TabPanel key={name} className="rounded-xl bg-white/5 p-3">
-                <ul>
-                  <ProfilePhotos profile={profile} />
-                </ul>
+                <div>{content}</div>
               </TabPanel>
             ))}
           </TabPanels>

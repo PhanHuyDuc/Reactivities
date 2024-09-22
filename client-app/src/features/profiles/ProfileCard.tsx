@@ -20,7 +20,9 @@ function ProfileCard({ profile }: Props) {
           </Link>
           <div className="border-b">
             <div className="font-bold">{profile.displayName}</div>
-            <div>Bio goes here</div>
+            <div className="w-52 overflow-hidden text-ellipsis whitespace-nowrap">
+              <span>{profile.bio}</span>
+            </div>
           </div>
           <div className="flex py-2">
             <UserCircleIcon className="size-6 text-blue-600" />
