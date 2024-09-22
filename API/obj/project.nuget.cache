@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6xRMhxjesvs=",
+  "dgSpecHash": "i6FTzI0o8Pk=",
   "success": true,
-  "projectFilePath": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\API\\API.csproj",
+  "projectFilePath": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\api\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\phanh\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\phanh\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

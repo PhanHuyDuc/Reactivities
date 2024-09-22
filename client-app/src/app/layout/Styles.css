@@ -47,6 +47,7 @@
 }
 .active {
   font-weight: bolder;
+  color: red;
 }
 .react-calendar {
   width: 100%;

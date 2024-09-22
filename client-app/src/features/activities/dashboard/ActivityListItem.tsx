@@ -30,7 +30,10 @@ function ActivityListItem({ activity }: Props) {
         </div>
       )}
       <div className="flex space-x-4 border-b-2 px-2 py-4">
-        <img className="w-16 rounded-full" src="../assets/user.png" />
+        <img
+          className="w-16 rounded-full"
+          src={activity.host?.image || '../assets/user.png'}
+        />
         <div className="flex flex-col">
           <Link
             to={`/activities/${activity.id}`}
@@ -39,7 +42,13 @@ function ActivityListItem({ activity }: Props) {
             {activity.title}
           </Link>
           <span className="text-sm">
-            Hosted by {activity.host?.displayName}
+            Hosted by{' '}
+            <Link
+              className="text-blue-600 underline hover:font-bold hover:text-blue-700"
+              to={`/profiles/${activity.hostUsername}`}
+            >
+              {activity.host?.displayName}
+            </Link>
           </span>
           {activity.isHost && (
             <span className="text-orange-500">

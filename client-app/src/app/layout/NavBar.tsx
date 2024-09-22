@@ -19,7 +19,7 @@ function NavBar() {
       <NavLink to={`/`} className="tracking-widest">
         <img src={Logo} alt="Reactivities" className="h-10 w-10 text-white" />
       </NavLink>
-      <NavLink to={`/activities`} className="text-white">
+      <NavLink to={`/activities`} className="text-white active:text-red-600">
         Activities
       </NavLink>
       <NavLink to={`/errors`} className="text-white">
@@ -47,7 +47,7 @@ function NavBar() {
           >
             <MenuItem>
               <Link
-                to={`/profile/${user?.username}`}
+                to={`/profiles/${user?.username}`}
                 className="group flex w-full items-center gap-2 rounded-lg px-3 py-1.5 data-[focus]:bg-white/10"
               >
                 <PencilIcon className="size-4 fill-white/30" />
