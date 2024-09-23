@@ -1,4 +1,3 @@
-import Button from '../../../ui/Button';
 import { useStore } from '../../../app/stores/store';
 import Loader from '../../../ui/Loader';
 import { useParams } from 'react-router-dom';
@@ -15,12 +14,14 @@ function ActivityDetails() {
     selectedActivity: activity,
     loadActivity,
     loadingInitial,
+    clearSelectedAcitvity,
   } = activityStore;
   const { id } = useParams();
 
   useEffect(() => {
     if (id) loadActivity(id);
-  }, [id, loadActivity]);
+    return () => clearSelectedAcitvity();
+  }, [id, loadActivity, clearSelectedAcitvity]);
 
   if (loadingInitial || !activity) return <Loader />;
   return (
@@ -28,7 +29,7 @@ function ActivityDetails() {
       <div className="col-span-2">
         <ActivityDetailedHeader activity={activity} />
         <ActivityDetailedInfo activity={activity} />
-        <ActivityDetailedChat />
+        <ActivityDetailedChat activityId={activity.id} />
       </div>
       <div>
         <ActivityDetailedSidebar activity={activity} />

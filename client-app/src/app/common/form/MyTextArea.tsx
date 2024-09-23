@@ -1,5 +1,4 @@
-import { ErrorMessage, Field, Form, useField } from 'formik';
-import React from 'react';
+import { useField } from 'formik';
 
 interface Props {
   placeholder: string;
@@ -16,7 +15,7 @@ function MyTextArea(props: Props) {
         <div className="py-2 sm:flex-row sm:items-center">
           <label className="">{props.label}</label>
           <textarea
-            className="h-10 w-full grow border p-2"
+            className="h-40 w-full grow border p-2"
             {...field}
             {...props}
           />
