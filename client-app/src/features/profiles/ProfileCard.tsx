@@ -3,6 +3,7 @@ import { Profile } from '../../app/models/profile';
 import { observer } from 'mobx-react-lite';
 import { Link } from 'react-router-dom';
 import { UserCircleIcon } from '@heroicons/react/20/solid';
+import FollowButton from './FollowButton';
 
 interface Props {
   profile: Profile;
@@ -26,9 +27,10 @@ function ProfileCard({ profile }: Props) {
           </div>
           <div className="flex py-2">
             <UserCircleIcon className="size-6 text-blue-600" />
-            20 followers
+            {profile.followersCount} followers
           </div>
         </div>
+        <FollowButton profile={profile} />
       </div>
     </>
   );

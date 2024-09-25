@@ -4,6 +4,9 @@ import ProfilePhotos from './ProfilePhotos';
 import { observer } from 'mobx-react-lite';
 import { Profile } from '../../app/models/profile';
 import ProfileAbout from './ProfileAbout';
+import ProfileFollowings from './ProfileFollowings';
+import { useStore } from '../../app/stores/store';
+import ProfileFollowers from './ProfileFollowers';
 
 interface Props {
   profile: Profile;
@@ -25,11 +28,11 @@ function ProfileContent({ profile }: Props) {
     },
     {
       name: 'Followers',
-      content: 'Follower Content',
+      content: <ProfileFollowers />,
     },
     {
       name: 'Following',
-      content: 'Following Content',
+      content: <ProfileFollowings />,
     },
   ];
   return (

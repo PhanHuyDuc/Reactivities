@@ -40,7 +40,11 @@ function ActivityDetailedSidebar({ activity: { attendees, host } }: Props) {
                   >
                     <strong>{attendee.displayName}</strong>{' '}
                   </Link>
-                  <div className="font-semibold text-yellow-400">Following</div>
+                  {attendee.following && (
+                    <div className="font-semibold text-yellow-400">
+                      Following
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

@@ -1,7 +1,5 @@
 import { observer } from 'mobx-react-lite';
-import React, { useState } from 'react';
 import { Profile } from '../../../app/models/profile';
-import { Link } from 'react-router-dom';
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
 import ProfileCard from '../../profiles/ProfileCard';
 interface Props {
@@ -13,10 +11,12 @@ function ActivityListItemAttendee({ attendees }: Props) {
       <ul className="flex space-x-3">
         {attendees.map((attendee) => (
           <Popover className="relative" key={attendee.username}>
-            <PopoverButton className="block text-sm/6 font-semibold text-white/50 focus:outline-none data-[active]:text-white data-[hover]:text-white data-[focus]:outline-1 data-[focus]:outline-white">
+            <PopoverButton
+              className={`block text-sm/6 font-semibold text-white/50 focus:outline-none data-[active]:text-white data-[hover]:text-white data-[focus]:outline-1 data-[focus]:outline-white`}
+            >
               <li>
                 <img
-                  className="size-12 rounded-full"
+                  className={`size-12 rounded-full ${attendee.following && `border border-orange-600`}`}
                   src={attendee.image || `/assets/user.png`}
                 />
               </li>
