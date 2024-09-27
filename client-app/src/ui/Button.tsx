@@ -4,6 +4,7 @@ interface Props {
   to?: string;
   disabled?: boolean | undefined;
   loading?: boolean | undefined;
+  active?: boolean | undefined;
   type?:
     | 'primary'
     | 'small'
@@ -14,7 +15,15 @@ interface Props {
     | 'error';
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
-function Button({ children, type, onClick, to, disabled, loading }: Props) {
+function Button({
+  children,
+  type,
+  onClick,
+  to,
+  disabled,
+  loading,
+  active,
+}: Props) {
   const base =
     'inline-block text-sm rounded-md bg-green-400  font-semibold uppercase tracking-wide text-stone-800 transition-colors duration-300 hover:bg-green-300 focus:bg-green-300 focus:outline-none focus:ring focus:ring-green-300 focus:ring-offset-2 disabled:cursor-not-allowed w-20';
 

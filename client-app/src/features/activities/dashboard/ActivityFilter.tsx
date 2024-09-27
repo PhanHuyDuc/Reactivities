@@ -1,8 +1,12 @@
 import { FunnelIcon } from '@heroicons/react/20/solid';
 import { observer } from 'mobx-react-lite';
 import Calendar from 'react-calendar';
+import { useStore } from '../../../app/stores/store';
 
 function ActivityFilter() {
+  const {
+    activityStore: { predicate, setPredicate },
+  } = useStore();
   return (
     <>
       <div className="divide-y divide-stone-300 bg-white px-3">
@@ -13,17 +17,35 @@ function ActivityFilter() {
           <span className="text-lg font-semibold text-cyan-500">Filters</span>
         </div>
         <div className="py-3 text-lg font-semibold">
-          <span>All Activities</span>
+          <span
+            onClick={() => setPredicate('all', 'true')}
+            className={`cursor-pointer ${predicate.has('all') ? 'bg-stone-500' : ''}`}
+          >
+            All Activities
+          </span>
         </div>
         <div className="py-3 text-lg font-semibold">
-          <span>I'm going</span>
+          <span
+            onClick={() => setPredicate('isGoing', 'true')}
+            className={`cursor-pointer ${predicate.has('isGoing') ? 'bg-stone-500' : ''}`}
+          >
+            I'm going
+          </span>
         </div>
         <div className="py-3 text-lg font-semibold">
-          <span>I'm hosting</span>
+          <span
+            onClick={() => setPredicate('isHost', 'true')}
+            className={`cursor-pointer ${predicate.has('isHost') ? 'bg-stone-500' : ''}`}
+          >
+            I'm hosting
+          </span>
         </div>
       </div>
       <div className={`w-full py-4`}>
-        <Calendar />
+        <Calendar
+          onChange={(date) => setPredicate('startDate', date as Date)}
+          value={predicate.get('startDate') || new Date()}
+        />
       </div>
     </>
   );
