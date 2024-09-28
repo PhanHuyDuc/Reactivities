@@ -7,6 +7,7 @@ import ProfileAbout from './ProfileAbout';
 import ProfileFollowings from './ProfileFollowings';
 import { useStore } from '../../app/stores/store';
 import ProfileFollowers from './ProfileFollowers';
+import ProfileActivities from './ProfileActivities';
 
 interface Props {
   profile: Profile;
@@ -24,7 +25,7 @@ function ProfileContent({ profile }: Props) {
     },
     {
       name: 'Events',
-      content: 'Event Content',
+      content: <ProfileActivities />,
     },
     {
       name: 'Followers',

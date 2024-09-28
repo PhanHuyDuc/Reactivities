@@ -49,11 +49,7 @@ function ActivityDashboard() {
         >
           <ActivityList />
         </InfiniteScroll>
-        {loadingNext && (
-          <div className="flex items-center justify-center">
-            <Loading />
-          </div>
-        )}
+        {loadingNext && <div className="py-6 text-center">Loading...</div>}
       </div>
       <div className="mx-2 mt-56 w-96 flex-auto p-2 text-left sm:mt-48">
         <ActivityFilter />
