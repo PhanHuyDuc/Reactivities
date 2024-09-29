@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Loading() {
   return (
     <div className="flex h-0 w-0 items-center justify-center rounded-lg border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-800">

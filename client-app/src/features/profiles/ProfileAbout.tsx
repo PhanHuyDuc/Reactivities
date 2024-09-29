@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react-lite';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useStore } from '../../app/stores/store';
 import Button from '../../ui/Button';
 import ProfileEditForm from './ProfileEditForm';

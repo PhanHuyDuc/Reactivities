@@ -1,29 +1,11 @@
 import { observer } from 'mobx-react-lite';
-import React from 'react';
 import { useStore } from '../../stores/store';
-import {
-  Description,
-  Dialog,
-  DialogPanel,
-  DialogTitle,
-} from '@headlessui/react';
+import { Description, Dialog, DialogPanel } from '@headlessui/react';
 
 function ModalContainer() {
   const { modalStore } = useStore();
   return (
     <>
-      {/* <Dialog
-        open={modalStore.modal.open}
-        onClose={modalStore.closeModal}
-        className="relative z-50"
-      >
-        <div className="fixed inset-0 bg-black bg-opacity-70"></div>
-        <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
-          <DialogPanel className="max-w-screen-lg space-y-4 border bg-white p-12">
-            <Description>{modalStore.modal.body}</Description>
-          </DialogPanel>
-        </div>
-      </Dialog> */}
       <Dialog
         as="div"
         className="relative z-10 focus:outline-none"

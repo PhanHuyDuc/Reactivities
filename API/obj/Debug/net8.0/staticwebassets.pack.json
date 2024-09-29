@@ -1,0 +1,73 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\api\\wwwroot\\assets\\Thumbs.db",
+      "PackagePath": "staticwebassets\\assets\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\api\\wwwroot\\assets\\categoryImages\\culture.jpg",
+      "PackagePath": "staticwebassets\\assets\\categoryImages\\culture.jpg"
+    },
+    {
+      "Id": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\api\\wwwroot\\assets\\categoryImages\\drinks.jpg",
+      "PackagePath": "staticwebassets\\assets\\categoryImages\\drinks.jpg"
+    },
+    {
+      "Id": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\api\\wwwroot\\assets\\categoryImages\\film.jpg",
+      "PackagePath": "staticwebassets\\assets\\categoryImages\\film.jpg"
+    },
+    {
+      "Id": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\api\\wwwroot\\assets\\categoryImages\\food.jpg",
+      "PackagePath": "staticwebassets\\assets\\categoryImages\\food.jpg"
+    },
+    {
+      "Id": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\api\\wwwroot\\assets\\categoryImages\\music.jpg",
+      "PackagePath": "staticwebassets\\assets\\categoryImages\\music.jpg"
+    },
+    {
+      "Id": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\api\\wwwroot\\assets\\categoryImages\\travel.jpg",
+      "PackagePath": "staticwebassets\\assets\\categoryImages\\travel.jpg"
+    },
+    {
+      "Id": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\api\\wwwroot\\assets\\index-CWZc7Whz.js",
+      "PackagePath": "staticwebassets\\assets\\index-CWZc7Whz.js"
+    },
+    {
+      "Id": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\api\\wwwroot\\assets\\index-CtLFLxfQ.css",
+      "PackagePath": "staticwebassets\\assets\\index-CtLFLxfQ.css"
+    },
+    {
+      "Id": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\api\\wwwroot\\assets\\logo.png",
+      "PackagePath": "staticwebassets\\assets\\logo.png"
+    },
+    {
+      "Id": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\api\\wwwroot\\assets\\placeholder.png",
+      "PackagePath": "staticwebassets\\assets\\placeholder.png"
+    },
+    {
+      "Id": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\api\\wwwroot\\assets\\user.png",
+      "PackagePath": "staticwebassets\\assets\\user.png"
+    },
+    {
+      "Id": "D:\\DucPH\\Udemy\\DotNet+React\\Project\\Reactivities\\api\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.API.props",
+      "PackagePath": "build\\API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.API.props",
+      "PackagePath": "buildMultiTargeting\\API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.API.props",
+      "PackagePath": "buildTransitive\\API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,6 +1,5 @@
 import { makeAutoObservable, reaction } from 'mobx';
 import { ServerError } from '../models/serverError';
-import { UserFormValues } from '../models/users';
 
 export default class CommonStore {
   error: ServerError | null = null;

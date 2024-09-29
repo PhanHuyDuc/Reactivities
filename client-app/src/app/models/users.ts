@@ -1,5 +1,3 @@
-import { string } from 'yup';
-
 export interface User {
   username: string;
   displayName: string;

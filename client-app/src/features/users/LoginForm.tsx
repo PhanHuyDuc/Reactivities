@@ -1,11 +1,8 @@
 import { ErrorMessage, Form, Formik } from 'formik';
-import React from 'react';
 import MyTextInput from '../../app/common/form/MyTextInput';
 import Button from '../../ui/Button';
 import { useStore } from '../../app/stores/store';
 import { observer } from 'mobx-react-lite';
-import Loader from '../../ui/Loader';
-import Loading from '../../ui/Loading';
 
 function LoginForm() {
   const { userStore } = useStore();

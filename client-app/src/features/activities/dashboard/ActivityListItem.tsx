@@ -1,6 +1,4 @@
-import { SyntheticEvent, useState } from 'react';
 import { Activity } from '../../../app/models/activity';
-import { useStore } from '../../../app/stores/store';
 import { Link } from 'react-router-dom';
 import { ClockIcon, MapPinIcon } from '@heroicons/react/16/solid';
 import { format } from 'date-fns';
@@ -10,18 +8,6 @@ interface Props {
 }
 
 function ActivityListItem({ activity }: Props) {
-  const { activityStore } = useStore();
-  const { deleteActivity, loading } = activityStore;
-  const [target, setTarget] = useState('');
-
-  function handleActivityDelete(
-    e: SyntheticEvent<HTMLButtonElement>,
-    id: string,
-  ) {
-    setTarget(e.currentTarget.name);
-    deleteActivity(id);
-  }
-
   return (
     <div className="grow gap-4 py-2" key={activity.id}>
       {activity.isCancelled && (

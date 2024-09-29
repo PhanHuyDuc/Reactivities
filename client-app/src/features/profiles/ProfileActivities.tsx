@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; // Assuming you use react-router
 import { observer } from 'mobx-react-lite';
 import { format } from 'date-fns';

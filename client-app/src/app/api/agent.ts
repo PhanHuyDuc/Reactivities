@@ -13,7 +13,7 @@ const sleep = (delay: number) => {
     setTimeout(resolve, delay);
   });
 };
-axios.defaults.baseURL = 'http://localhost:5000/api';
+axios.defaults.baseURL = import.meta.env.VITE_API_URL;
 
 axios.interceptors.request.use((config) => {
   const token = store.commonStore.token;
@@ -23,7 +23,7 @@ axios.interceptors.request.use((config) => {
 
 axios.interceptors.response.use(
   async (response) => {
-    await sleep(500);
+    if (import.meta.env.DEV) await sleep(500);
     const pagination = response.headers['pagination'];
     if (pagination) {
       response.data = new PaginatedResult(
@@ -74,7 +74,7 @@ axios.interceptors.response.use(
     return Promise.reject(error);
   },
 );
-const responseBody = <T>(response: AxiosResponse) => response.data;
+const responseBody = (response: AxiosResponse) => response.data;
 const requests = {
   get: <T>(url: string) => axios.get<T>(url).then(responseBody),
   post: <T>(url: string, body: {}) =>

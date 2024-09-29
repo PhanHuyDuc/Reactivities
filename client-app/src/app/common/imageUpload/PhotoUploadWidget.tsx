@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import PhotoWidgetDropzone from './PhotoWidgetDropzone';
 import PhotoWidgetCropper from './PhotoWidgetCropper';
 import Button from '../../../ui/Button';
-import { CheckBadgeIcon, CheckIcon } from '@heroicons/react/20/solid';
-import { CursorArrowRaysIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { CheckIcon } from '@heroicons/react/20/solid';
+import { XMarkIcon } from '@heroicons/react/24/outline';
 import Loading from '../../../ui/Loading';
 
 interface Props {

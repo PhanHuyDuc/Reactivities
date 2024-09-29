@@ -1,6 +1,5 @@
 import { observer } from 'mobx-react-lite';
-import React, { useEffect } from 'react';
-import { PencilSquareIcon } from '@heroicons/react/24/outline';
+import { useEffect } from 'react';
 import { useStore } from '../../../app/stores/store';
 import { Link } from 'react-router-dom';
 import { Field, FieldProps, Form, Formik } from 'formik';

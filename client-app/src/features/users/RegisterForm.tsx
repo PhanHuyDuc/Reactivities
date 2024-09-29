@@ -1,4 +1,4 @@
-import { ErrorMessage, Form, Formik, validateYupSchema } from 'formik';
+import { ErrorMessage, Form, Formik } from 'formik';
 import MyTextInput from '../../app/common/form/MyTextInput';
 import Button from '../../ui/Button';
 import { useStore } from '../../app/stores/store';

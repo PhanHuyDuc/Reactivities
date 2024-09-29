@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Profile } from '../../app/models/profile';
 import { observer } from 'mobx-react-lite';
 import FollowButton from './FollowButton';

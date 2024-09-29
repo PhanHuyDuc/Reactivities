@@ -1,11 +1,9 @@
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react';
-import React from 'react';
 import ProfilePhotos from './ProfilePhotos';
 import { observer } from 'mobx-react-lite';
 import { Profile } from '../../app/models/profile';
 import ProfileAbout from './ProfileAbout';
 import ProfileFollowings from './ProfileFollowings';
-import { useStore } from '../../app/stores/store';
 import ProfileFollowers from './ProfileFollowers';
 import ProfileActivities from './ProfileActivities';
 

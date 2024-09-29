@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react-lite';
-import React, { SyntheticEvent, useState } from 'react';
+import { SyntheticEvent, useState } from 'react';
 import { Photo, Profile } from '../../app/models/profile';
 import { PhotoIcon } from '@heroicons/react/20/solid';
 import { useStore } from '../../app/stores/store';

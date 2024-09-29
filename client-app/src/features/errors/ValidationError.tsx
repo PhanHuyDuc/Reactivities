@@ -1,6 +1,4 @@
-import { PlayCircleIcon } from '@heroicons/react/16/solid';
 import { PlusIcon } from '@heroicons/react/20/solid';
-import { CircleStackIcon } from '@heroicons/react/24/outline';
 
 interface Props {
   errors: string[];

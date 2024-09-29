@@ -8,19 +8,17 @@ function MyDateInput(props: Partial<DatePickerProps>) {
     <>
       <div className="gap-2 sm:flex-row sm:items-center">
         <div className="py-2 sm:flex-row sm:items-center">
+          {/* @ts-ignore */}
           <DatePicker
             {...field}
             {...props}
-            selected={(field.value && new Date(field.value)) || null}
-            onChange={(value) => helpers.setValue(value)}
+            selected={field.value ? new Date(field.value as string) : null} // Ensure value is Date or null
+            onChange={(date: Date | [Date | null, Date | null] | null) =>
+              helpers.setValue(date)
+            } // Handle selectsRange type
+            selectsRange={true}
             className="h-10 w-full grow border p-2"
           />
-          {/* <label className="">{props.label}</label>
-          <input
-            className="h-10 w-full grow border p-2"
-            {...field}
-            {...props}
-          /> */}
         </div>
 
         {error ? (

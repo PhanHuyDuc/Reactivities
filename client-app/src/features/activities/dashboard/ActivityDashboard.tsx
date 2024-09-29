@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 import Loader from '../../../ui/Loader';
 import ActivityFilter from './ActivityFilter';
 import { PagingParams } from '../../../app/models/pagination';
-import Loading from '../../../ui/Loading';
 import InfiniteScroll from 'react-infinite-scroller';
 
 function ActivityDashboard() {

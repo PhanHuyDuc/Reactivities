@@ -1,4 +1,3 @@
-import { act } from 'react';
 import { Profile } from './profile';
 
 export interface IActivity {
